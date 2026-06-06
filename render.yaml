@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: teamtasks-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CORS_ORIGIN
+        sync: false   # You'll set this in the Render dashboard after Vercel gives you the URL

@@ -1,0 +1,16 @@
+{
+  "name": "teamtasks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TeamTasks take-home starter",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix web install",
+    "seed": "npm --prefix server run seed",
+    "dev": "concurrently -n server,web -c blue,green \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:web": "npm --prefix web run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
